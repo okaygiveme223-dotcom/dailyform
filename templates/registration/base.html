@@ -1,0 +1,30 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#252a34">
+  <title>{% block title %}Dailyform{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'app.css' %}">
+  <link rel="manifest" href="/app.webmanifest">
+  <link rel="apple-touch-icon" href="{% static 'icon192.png' %}">
+</head>
+<body>
+  <div class="auth-layout">
+    <aside class="auth-aside">
+      <div>
+        <div class="brand"><span class="logo">d</span>Dailyform</div>
+        <h1>Make room<br>for progress.</h1>
+        <p>Your A-Level revision and gym training, together in one place.</p>
+      </div>
+      <p class="muted">Academic &amp; workout tracker</p>
+    </aside>
+    <main class="auth-main">
+      <div class="auth-form">
+        {% block content %}{% endblock %}
+      </div>
+    </main>
+  </div>
+</body>
+</html>
